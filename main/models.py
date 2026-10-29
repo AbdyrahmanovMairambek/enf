@@ -32,7 +32,7 @@ class ProductSize(models.Model):
      stock = models.PositiveBigIntegerField(default=0)
 
      def __str__(self):
-          return f"{self.sixe.name}({self.stock} in stock) for{self.product.name}"
+          return f"{self.size.name}({self.stock} in stock) for{self.product.name}"
 class Product(models.Model):
     name = models.CharField(max_length=100)
     slug =models.CharField(max_length=100,unique=True)
