@@ -9,7 +9,7 @@ from .forms import CustomUserCreationForm, CustomUserLoginForm, \
 from .models import CustomUser
 from django.contrib import messages
 from main.models import Product
-from orders.models import Order
+
 
 
 def register(request):
@@ -94,3 +94,4 @@ def logout_view(request):
     logout(request)
     if request.headers.get('HX-Request'):
         return HttpResponse(headers={'HX-Redirect': reverse('main:index')})
+    
