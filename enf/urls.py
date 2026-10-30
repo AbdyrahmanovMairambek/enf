@@ -5,10 +5,8 @@ from django.conf.urls.static import static
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    # 1-ката оңдолду: "nomespace" эмес, "namespace" болушу керек
     path('cart/', include('cart.urls', namespace='cart')),
-    
-    # 2-ката түшүндүрмөсү төмөндө: "main.urls" файлын камтуу
+    path('users/', include('users.urls', namespace='users')),
     path('', include(('main.urls', 'main'), namespace='main')),
 ]
 
